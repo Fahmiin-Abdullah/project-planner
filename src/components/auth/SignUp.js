@@ -41,4 +41,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignOut
+export default SignUp
