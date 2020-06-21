@@ -23,9 +23,7 @@ const reactReduxFirebaseProps = { firebase, config: fbConfig, dispatch: store.di
 ReactDOM.render(
   <Provider store={ store }>
     <ReactReduxFirebaseProvider { ...reactReduxFirebaseProps }>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <App />
     </ReactReduxFirebaseProvider>
   </Provider>,
   document.getElementById('root')
