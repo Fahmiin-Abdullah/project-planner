@@ -16,7 +16,7 @@ export const signOut = () => {
 }
 
 export const signUp = newUser => {
-  return (dispath, getState, { getFirestore }) => {
+  return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore()
     firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password)
             .then(res => {

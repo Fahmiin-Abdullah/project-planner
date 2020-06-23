@@ -57,7 +57,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispathToProps = dispatch => {
-  return { signUp: newUser => dispath(signUp()) }
+  return { signUp: newUser => dispatch(signUp()) }
 }
 
 export default connect(mapStateToProps, mapDispathToProps)(SignUp)
