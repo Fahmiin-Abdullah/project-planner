@@ -18,7 +18,20 @@ const store = createStore(rootReducer,
   )
 )
 
-const reactReduxFirebaseProps = { firebase, config: fbConfig, dispatch: store.dispatch, createFirestoreInstance }
+const profileSpecificProps = {
+  userProfile: 'users',
+  useFirestoreForProfile: true,
+  enableRedirectHandling: false,
+  resetBeforeLogin: false
+}
+
+const reactReduxFirebaseProps = {
+  firebase,
+  config: fbConfig,
+  config: profileSpecificProps,
+  dispatch: store.dispatch,
+  createFirestoreInstance
+}
 
 ReactDOM.render(
   <Provider store={ store }>
