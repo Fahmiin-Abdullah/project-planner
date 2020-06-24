@@ -14,3 +14,4 @@ The project is built on React, Redux with Firebase (auth, firestore, hosting, fu
 2. Main concept of Redux requires practice to grasp and some of the code are outdated, especially in connecting the React app to Firebase(currently updated to V.3). Contact the author of the project in case errors are still found in the app.
 3. Cloud functions are handy when it comes to delivering real-time updates when triggered. The triggers are correlated to Firebase(like collection creation or user sign up) and is what's used to call the deployed functions.
 4. When initializing Firebase, set the public folder to build as that is what React will output when building for production.
+5. There was a problem with syncing the react-redux-firebase to the newest version which causes the error in importing new functions. Resolved once packages were updated.
