@@ -43,15 +43,11 @@ class CreateProject extends Component {
 }
 
 const mapStateToProps = state => {
-  return {
-    auth: state.firebase.auth
-  }
+  return { auth: state.firebase.auth }
 }
 
 const mapDispatchToProps = dispatch => {
-  return {
-    createProject: project => dispatch(createProject(project))
-  }
+  return { createProject: project => dispatch(createProject(project)) }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateProject)

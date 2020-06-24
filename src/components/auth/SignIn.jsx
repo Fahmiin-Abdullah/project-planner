@@ -52,9 +52,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return {
-    signIn: credentials => dispatch(signIn(credentials))
-  }
+  return { signIn: credentials => dispatch(signIn(credentials)) }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
