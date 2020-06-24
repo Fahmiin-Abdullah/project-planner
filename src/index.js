@@ -8,13 +8,12 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-firestore'
 import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase'
-import fbConfig from './config/firebaseConfig'
-import firebase from 'firebase/app'
+import firebase from './config/fbConfig'
 
 const store = createStore(rootReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-    reduxFirestore(fbConfig)
+    reduxFirestore(firebase)
   )
 )
 
@@ -27,7 +26,6 @@ const profileSpecificProps = {
 
 const reactReduxFirebaseProps = {
   firebase,
-  config: fbConfig,
   config: profileSpecificProps,
   dispatch: store.dispatch,
   createFirestoreInstance
