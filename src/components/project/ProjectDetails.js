@@ -8,7 +8,7 @@ import moment from 'moment'
 const ProjectDetails = props => {
   const { project, auth } = props
 
-  if (!auth.id) return <Redirect to="/sign-in" />
+  if (!auth.uid) return <Redirect to="/sign-in" />
 
   if (project) {
     return (

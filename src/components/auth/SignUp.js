@@ -18,7 +18,7 @@ class SignUp extends Component {
   render() {
     const { auth, authError } = this.props
 
-    if (auth.id) return <Redirect to="/dashboard"/>
+    if (auth.uid) return <Redirect to="/"/>
 
     return (
       <div className="container">
@@ -57,7 +57,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispathToProps = dispatch => {
-  return { signUp: newUser => dispatch(signUp()) }
+  return { signUp: newUser => dispatch(signUp(newUser)) }
 }
 
 export default connect(mapStateToProps, mapDispathToProps)(SignUp)
